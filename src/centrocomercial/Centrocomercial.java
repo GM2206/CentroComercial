@@ -2,10 +2,10 @@ package centrocomercial;
 //Este es un nuevo comentario
 public class Centrocomercial {
      
-    private String almacenes; 
-    private int aumentoVentas;
-    private int puertasAcceso; 
-    private String dueno;
+    private String almacenes; //Este string muestra el nombre del almacen que se maneja 
+    private int aumentoVentas; //Aqui vemos la cantidad de muestras que tenemos
+    private int puertasAcceso; //Este muestra las puertas que tiene el centro comercial 
+    private String dueno; //Aqui vemos el nombre del dueño del centro comercial
     
     public Centrocomercial (String dueno, int aumentoVentas, int puertasAcceso, int par2, String almacenes){
         this.almacenes = almacenes;
@@ -23,6 +23,7 @@ public class Centrocomercial {
         this.dueno = dueno;     
     }
     
+    //Aqui comienza el metodo get y set
     public String getAlmacenes() {
         return almacenes;
     }
