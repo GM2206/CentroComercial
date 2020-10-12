@@ -1,5 +1,5 @@
 package centrocomercial;
-
+//Este es un nuevo comentario
 public class Centrocomercial {
      
     private String almacenes; 
