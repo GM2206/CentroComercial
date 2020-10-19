@@ -22,7 +22,7 @@ public class Centrocomercial {
     public void vender (String dueno){
         this.dueno = dueno;     
     }
-    
+        
     //Aqui comienza el metodo get y set
     public String getAlmacenes() {
         return almacenes;
@@ -39,7 +39,7 @@ public class Centrocomercial {
     public void setaumentoVentas(int aumentoVentas) {
         this.aumentoVentas = aumentoVentas;
     }
-            
+                
     public int getpuertasAcceso() {
         return puertasAcceso;
     }
@@ -57,18 +57,22 @@ public class Centrocomercial {
     }
             
     public static void main(String[] args){
-        Centrocomercial centroComercialChipichape = new Centrocomercial("Gabriela", 15, 12, 4, "Zara");
+        Centrocomercial chipichape = new Centrocomercial("Gabriela", 
+                15, 
+                12, 
+                4, 
+                "Zara");
         
-        System.out.println("El centro comercial cuenta con almacenes" + centroComercialChipichape.getAlmacenes());
-        System.out.println("El centro comercial tiene un aumento de " + centroComercialChipichape.getaumentoVentas() + "ventas por día");
-        System.out.println("El centro comercial tiene " + centroComercialChipichape.getpuertasAcceso() + "puertas de acceso");
-        System.out.println("La dueña del centro comercial es" + centroComercialChipichape.getDueno());
-        
-        centroComercialChipichape.aumentoEnergia();
-        
-        System.out.println("El centro comercial cuenta con " + centroComercialChipichape.getAlmacenes() + "almacenes");
-        System.out.println("El centro comercial tiene un aumento de " + centroComercialChipichape.getaumentoVentas() + "ventas por día");
-        System.out.println("El centro comercial tiene " + centroComercialChipichape.getpuertasAcceso() + "puertas de acceso");
-        System.out.println("La dueña del centro comercial es" + centroComercialChipichape.getDueno());
+        Almacen01 almacen01 = new Almacen01("Forever21", 
+                250, 
+                20, "Sebastian", 100, 2, 5, "Ropa Juvenil");
+      
+        System.out.println(String.format("Nombre almacen: %s", almacen01.getNombreDelAlmacen()));
+        System.out.println(String.format("Cantidad de Ventas: %d", almacen01.getCantidadDeVentas()));
+        System.out.println(String.format("La cantidad de trabajadores es: %d", almacen01.getNumeroDeTrabajadores()));
+        System.out.println(String.format("El nombre del dueño es: %s", almacen01.getDueno()));
+        System.out.println(String.format("Aumento de ventas es: %d", almacen01.getaumentoVentas()));
+        System.out.println(String.format("Las puuertas de acceso son: %d", almacen01.getpuertasAcceso()));
+        System.out.println(String.format("Part2, equivale a: %d", almacen01.getAlmacenes()));
     }    
 }
