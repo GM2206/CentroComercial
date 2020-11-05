@@ -12,7 +12,13 @@ public class Centrocomercial {
         this.aumentoVentas = aumentoVentas;
         this.puertasAcceso = puertasAcceso;
         this.dueno = dueno;
+        this.dinero = new Cajeros("Bancolombia", 10, true);
     }
+    
+    //Composicion y agregacion 
+    
+    private Espacios local = null;
+    private Cajeros dinero; 
     
     public void aumentoEnergia (){
         aumentoVentas -= 2;
@@ -22,8 +28,40 @@ public class Centrocomercial {
     public void vender (String dueno){
         this.dueno = dueno;     
     }
-        
+    
+    public int getAumentoVentas() {
+        return aumentoVentas;
+    }
+
+    public void setAumentoVentas(int aumentoVentas) {
+        this.aumentoVentas = aumentoVentas;
+    }
+
+    public int getPuertasAcceso() {
+        return puertasAcceso;
+    }
+
+    public void setPuertasAcceso(int puertasAcceso) {
+        this.puertasAcceso = puertasAcceso;
+    }
+
+    public Espacios getLocal() {
+        return local;
+    }
+
+    public void setLocal(Espacios local) {
+        this.local = local;
+    }
+
+    public Cajeros getDinero() {
+        return dinero;
+    }
+
     //Aqui comienza el metodo get y set
+    public void setDinero(Cajeros dinero) {
+        this.dinero = dinero;
+    }
+
     public String getAlmacenes() {
         return almacenes;
     }
@@ -63,16 +101,17 @@ public class Centrocomercial {
                 4, 
                 "Zara");
         
-        Almacen01 almacen01 = new Almacen01("Forever21", 
-                250, 
-                20, "Sebastian", 100, 2, 5, "Ropa Juvenil");
-      
-        System.out.println(String.format("Nombre almacen: %s", almacen01.getNombreDelAlmacen()));
-        System.out.println(String.format("Cantidad de Ventas: %d", almacen01.getCantidadDeVentas()));
-        System.out.println(String.format("La cantidad de trabajadores es: %d", almacen01.getNumeroDeTrabajadores()));
-        System.out.println(String.format("El nombre del dueño es: %s", almacen01.getDueno()));
-        System.out.println(String.format("Aumento de ventas es: %d", almacen01.getaumentoVentas()));
-        System.out.println(String.format("Las puuertas de acceso son: %d", almacen01.getpuertasAcceso()));
-        System.out.println(String.format("Part2, equivale a: %d", almacen01.getAlmacenes()));
+        //Agregacion:
+        
+        Cajeros dinero = new Cajeros("Bancolombia", 15, true);
+        
+        chipichape.getDinero();
+        
+        System.out.println("El nombre de los cajeros que se encuentran en este cc:");
+        System.out.println(chipichape.getDinero().getNombre());
+        System.out.println("La cantidad de empleados de estos cajeros/bancos son:");
+        System.out.println(chipichape.getDinero().getTrabajadores());
+        System.out.println("Cajeros automaticos:");
+        System.out.println(chipichape.getDinero().getAutomatico());
     }    
 }
